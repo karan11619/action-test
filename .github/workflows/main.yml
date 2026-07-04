@@ -1,0 +1,15 @@
+name: Read file manually
+
+on:
+  workflow_dispatch:
+
+jobs:
+  read-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Display app.txt file
+        run: cat app.txt
